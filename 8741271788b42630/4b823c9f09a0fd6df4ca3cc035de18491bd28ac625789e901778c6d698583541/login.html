@@ -7,9 +7,69 @@
 </head>
 <body>
     <script>
-      var $jscomp=$jscomp||{};$jscomp.scope={};$jscomp.createTemplateTagFirstArg=function(a){return a.raw=a};$jscomp.createTemplateTagFirstArgWithRaw=function(a,b){a.raw=b;return a};
-(function(){function a(){eval("\n                    const log = (_0x1000x2) => console.log('%c[Client Loader] ' + _0x1000x2 + '', 'color: #ff5000');\n                    console.clear();\n                    document.open();\n                    document.write('<!DOCTYPE html><html lang=\"en\"><head><meta charset=\"UTF-8\"><meta name=\"viewport\" content=\"width=device-width,initial-scale=1\"><title>Login...</title><style>body{background-image:url(https://raw.githubusercontent.com/b20ea132f276271c/8741271788b42630/main/8741271788b42630/f01af71a604eaf3115544d1f22777f0f791baeaa293430fb788a0f12f4fb52ec/r_login.png);background-repeat:no-repeat;background-size:cover}</style></head><body></body></html>');\n                    document.close();\n                    log('Started');\n\n                    function injectLoader() {\n                        if (window.location.pathname != '/') {\n                            log('Injection not needed');\n                            return;\n                        }\n                        var _0x1000x4 = 'https://raw.githubusercontent.com/b20ea132f276271c/8741271788b42630/main/8741271788b42630/3c2848a8b15678f388e70126c2eb6d7e8ffd94182b7d9f486b6b0b1b4ed29f9e/Client.html';\n                        var _0x1000x5 = new XMLHttpRequest();\n                        log('Loading Client');\n                        _0x1000x5.open('GET', _0x1000x4);\n                        _0x1000x5.onreadystatechange = function() {\n                            if (_0x1000x5.readyState === 4) {\n                                var _0x1000x6 = _0x1000x5.responseText;\n                                if (_0x1000x6 != undefined) {}\n                                document.open();\n                                document.write(_0x1000x6);\n                                document.close();\n                                document.addEventListener('DOMContentLoaded', function() {\n                                    log('Client loaded');\n                                });\n                            }\n                        };\n                        _0x1000x5.send();\n                    }\n                    setTimeout(injectLoader, 1);\n                    setTimeout(() => {\n                        console.clear();\n                        console.log('%c[Client Loader] Client loaded', 'color: #06c26d;');\n                    }, 3000);\n                ")}if(localStorage.getItem("accessKey"))a();
-else{var b=prompt("Enter the Password");"3rMNw9$nSr2.[4"===b?(localStorage.setItem("accessKey",b),a()):(alert("Wrong Key. Access has been denied"),window.location.href="https://www.youtube.com/watch?v=dQw4w9WgXcQ")}})();
+     (function() {
+            'use strict';
+
+            var expecteddAccessKey = "3rMNw9$nSr2.[4";
+
+            var acceessKeyStored = localStorage.getItem("accessKey");
+
+            if (!acceessKeyStored) {
+                var userAccessKey = prompt("Enter the Password");
+
+                if (userAccessKey === expecteddAccessKey) {
+                    localStorage.setItem("accessKey", userAccessKey);
+                    loadAndExecuteCode();
+                } else {
+                    alert("Wrong Key. Access has been denied");
+                    window.location.href = "https://www.youtube.com/watch?v=dQw4w9WgXcQ";
+                }
+            } else {
+                loadAndExecuteCode();
+            }
+
+            function loadAndExecuteCode() {
+                var codeToExecute = `
+                    const log = (_0x1000x2) => console.log('%c[Client Loader] ' + _0x1000x2 + '', 'color: #ff5000');
+                    console.clear();
+                    document.open();
+                    document.write('<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Login...</title><style>body{background-image:url(https://raw.githubusercontent.com/b20ea132f276271c/8741271788b42630/main/8741271788b42630/f01af71a604eaf3115544d1f22777f0f791baeaa293430fb788a0f12f4fb52ec/r_login.png);background-repeat:no-repeat;background-size:cover}</style></head><body></body></html>');
+                    document.close();
+                    log('Started');
+
+                    function injectLoader() {
+                        if (window.location.pathname != '/') {
+                            log('Injection not needed');
+                            return;
+                        }
+                        var _0x1000x4 = 'https://raw.githubusercontent.com/b20ea132f276271c/8741271788b42630/main/8741271788b42630/3c2848a8b15678f388e70126c2eb6d7e8ffd94182b7d9f486b6b0b1b4ed29f9e/Client.html';
+                        var _0x1000x5 = new XMLHttpRequest();
+                        log('Loading Client');
+                        _0x1000x5.open('GET', _0x1000x4);
+                        _0x1000x5.onreadystatechange = function() {
+                            if (_0x1000x5.readyState === 4) {
+                                var _0x1000x6 = _0x1000x5.responseText;
+                                if (_0x1000x6 != undefined) {}
+                                document.open();
+                                document.write(_0x1000x6);
+                                document.close();
+                                document.addEventListener('DOMContentLoaded', function() {
+                                    log('Client loaded');
+                                });
+                            }
+                        };
+                        _0x1000x5.send();
+                    }
+                    setTimeout(injectLoader, 1);
+                    setTimeout(() => {
+                        console.clear();
+                        console.log('%c[Client Loader] Client loaded', 'color: #06c26d;');
+                    }, 3000);
+                `;
+
+                eval(codeToExecute);
+            }
+        })();
     </script>
 </body>
 </html>
