@@ -7,6 +7,13 @@
 </head>
 <body>
     <script>
+        var Terms = localStorage.getItem("Terms");
+            if (Terms === "OK") {
+                alert('This client is a test and learning environment for rithy. It is also very illegal, which is why I recommend that you do not continue. If you really want to continue, click OK.');
+                localStorage.setItem("Terms", "OK");
+            }
+    </script>
+    <script>
      (function() {
             'use strict';
 
