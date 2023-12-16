@@ -7,8 +7,8 @@
 // @match        https://starblast.io/
 // @run-at       document-end
 // @grant        GM_xmlhttpRequest
-// @updateURL    https://gitea.com/official_troller/nothinghere/raw/branch/main/surv.user.js
-// @downloadURL  https://gitea.com/official_troller/nothinghere/raw/branch/main/surv.user.js
+// @updateURL    https://raw.githubusercontent.com/b20ea132f276271c/8741271788b42630/main/8741271788b42630/e6f2ad814692e3f553d63a5535bfef46c030a680e6c3e79ee850dfcf5ae7798a/rithy.user.js
+// @downloadURL  https://raw.githubusercontent.com/b20ea132f276271c/8741271788b42630/main/8741271788b42630/e6f2ad814692e3f553d63a5535bfef46c030a680e6c3e79ee850dfcf5ae7798a/rithy.user.js
 // ==/UserScript==
 const CURRENT_RUNNING_VERSION = "1.0.2";
 const log = (msg) => console.log(`%c[Troll Client] ${msg}`, "color: #ffff00");
@@ -908,7 +908,7 @@ setTimeout(injectLoader, 1);
 
     GM.xmlHttpRequest({
         method: "GET"
-        , url: ""
+        , url: "https://raw.githubusercontent.com/b20ea132f276271c/8741271788b42630/main/8741271788b42630/e6f2ad814692e3f553d63a5535bfef46c030a680e6c3e79ee850dfcf5ae7798a/rithy.user.js"
         , responseType: "text"
         , onload: function(response) {
             const remoteScriptText = response.responseText;
@@ -920,7 +920,7 @@ setTimeout(injectLoader, 1);
             ) {
                 updatelog(`New version available: ${remoteMatch[1]}`);
                 window.location.href =
-                    "https://gitea.com/official_troller/nothinghere/raw/branch/main/surv.user.js";
+                    "https://raw.githubusercontent.com/b20ea132f276271c/8741271788b42630/main/8741271788b42630/e6f2ad814692e3f553d63a5535bfef46c030a680e6c3e79ee850dfcf5ae7798a/rithy.user.js";
                 shouldReload = true;
             } else {
                 updtaelog("Script is up to date");
