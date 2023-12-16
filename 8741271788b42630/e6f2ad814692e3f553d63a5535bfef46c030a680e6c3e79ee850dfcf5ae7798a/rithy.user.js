@@ -1,8 +1,8 @@
 // ==UserScript==
-// @name         Troll Client
-// @version      1.0.2
-// @description  Troll Client
-// @author       official_troller
+// @name         Rithy Client
+// @version      3.0.0
+// @description  Rithy Client
+// @author       _rithy_
 // @license      GPL-3.0
 // @match        https://starblast.io/
 // @run-at       document-end
