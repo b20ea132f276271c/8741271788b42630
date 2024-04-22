@@ -28,5 +28,5 @@
             case "SRCsilver": this.icon = "https://cdn.upload.systems/uploads/apHIyN5K.png"; break;
             case "Lord": this.icon = "https://cdn.upload.systems/uploads/GMOKd0uP.png"; break;
             case "LightBeam": this.icon = "https://cdn.upload.systems/uploads/2Z3fgxK4.png"; break;
-            case "Rithy": this.icon = "https://raw.githubusercontent.com/b20ea132f276271c/8741271788b42630/main/8741271788b42630/logo_rithy_agrandi-modified_200x200.png"; break;
+            case "rithy": this.icon = "https://raw.githubusercontent.com/b20ea132f276271c/8741271788b42630/main/8741271788b42630/logo_rithy_agrandi-modified_200x200.png"; break;
             case "blank": this.icon = "https://cdn.upload.systems/uploads/0zNDCd9Y.png"; break;
